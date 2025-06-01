@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="formulario-cadastro">
+        <h2 class="titulo-formulario">Cadastro</h2>
+        
+        <div class="grupo-formulario">
+            <label for="nome-completo" class="rotulo-formulario">Nome completo</label>
+            <input type="text" id="nome-completo" class="controle-formulario" required>
+            <div id="erro-nome" class="mensagem-erro">Por favor, insira seu nome completo</div>
+        </div>
+        
+        <div class="grupo-formulario">
+            <label for="email" class="rotulo-formulario">E-mail</label>
+            <input type="email" id="email" class="controle-formulario" required>
+            <div id="erro-email" class="mensagem-erro">Por favor, insira um e-mail válido</div>
+        </div>
+        
+        <div class="grupo-formulario">
+            <label for="senha" class="rotulo-formulario">Senha</label>
+            <input type="password" id="senha" class="controle-formulario" required>
+            <div id="erro-senha" class="mensagem-erro">A senha deve ter pelo menos 6 caracteres</div>
+        </div>
+        
+        <div class="grupo-formulario">
+            <label for="confirmar-senha" class="rotulo-formulario">Confirmar senha</label>
+            <input type="password" id="confirmar-senha" class="controle-formulario" required>
+            <div id="erro-confirmar-senha" class="mensagem-erro">As senhas não coincidem</div>
+        </div>
+        
+        <div class="grupo-formulario">
+            <label for="data-nascimento" class="rotulo-formulario">Data de nascimento</label>
+            <input type="date" d="data-nascimento" class="controle-formulario" required>
+            <div id="erro-data" class="mensagem-erro">Por favor, insira sua data de nascimento</div>
+        </div>
+        
+        <div class="grupo-formulario">
+            <label class="rotulo-formulario">Gênero</label>
+            <div class="grupo-opcoes">
+                <div class="opcao">
+                    <input type="radio" id="masculino" name="genero" value="masculino" required>
+                    <label for="masculino">Masculino</label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" id="feminino" name="genero" value="feminino">
+                    <label for="feminino">Feminino</label>
+                </div>
+                <div class="opcao">
+                    <input type="radio" id="outro" name="genero" value="outro">
+                    <label for="outro">Outro</label>
+                </div>
+            </div>
+            <div id="erro-genero" class="mensagem-erro">Por favor, selecione seu gênero</div>
+        </div>
+        
+        <div class="grupo-formulario">
+            <div class="grupo-termos">
+                <input type="checkbox" id="termos" required>
+                <label for="termos">Aceito os termos e condições</label>
+            </div>
+            <div id="erro-termos" class="mensagem-erro">Você deve aceitar os termos</div>
+        </div>
+        
+        <button type="submit" class="botao">Cadastrar</button>
+        
+        <div id="mensagem-sucesso" class="mensagem-sucesso">Cadastro realizado com sucesso!</div>
+    </form>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
